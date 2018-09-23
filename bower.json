@@ -11,13 +11,9 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "assets/src/bower_components/",
-    "test",
-    "tests"
+    "assets/src/bower_components/"
   ],
   "dependencies": {
-    "bootstrap": "^v4.0.0-beta",
-    "popper.js": "^1.14.3",
     "jQuery": "^3.3.1"
   }
 }

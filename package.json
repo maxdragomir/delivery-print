@@ -21,6 +21,6 @@
     "imagemin-pngquant": "^5.0.1"
   },
   "dependencies": {
-    "npm": "^6.0.0"
+    "npm": "^6.4.1"
   }
 }
