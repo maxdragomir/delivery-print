@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+body{
+  max-width: 1600px;
+  font-family: AvenirNextCyr-Regular, sans-serif;
+  padding: 0;
+  margin: 0 auto;
+  //border: 1px solid;
+  //height: 100vh;
+}
+.dark-blue_text {
+  color: #005f75;
+}
+.blue_text {
+  color: #458a9a;
+}
+.header {
+  position: relative;
+  display: flex;
+}
+
+.content {
+  position: relative;
+  max-width: 1000px;
+  width: 1000px;
+  display: flex;
+
+  .logo img {
+    max-width: 200px;
+    width: 200px;
+  }
+  .info {
+    width: 800px;
+    display: flex;
+    flex-flow: column;
+
+    .top-info {
+      display: flex;
+      justify-content: space-between;
+      .type {
+        font-family: AvenirNextCyr-Demi, sans-serif;
+      }
+    }
+  }
+}
+.sidebar {
+  position: relative;
+  max-width: 600px;
+  width: 600px;
+}

@@ -22,8 +22,8 @@ var path = {
     },
     src: {
         html:  'assets/src/*.html',
-        js:    'assets/src/js/main.js',
-        style: 'assets/src/style/main.scss',
+        js:    'assets/src/js/**/*.js',
+        style: 'assets/src/style/**/*.scss',
         img:   'assets/src/img/**/*.*',
         fonts: 'assets/src/fonts/**/*.*'
     },
@@ -85,7 +85,7 @@ gulp.task('css:build', function () {
         .pipe(autoprefixer({ // добавим префиксы
             browsers: autoprefixerList
         }))
-        .pipe(cleanCSS()) // минимизируем CSS
+        // .pipe(cleanCSS()) минимизируем CSS
         .pipe(sourcemaps.write('./')) // записываем sourcemap
         .pipe(gulp.dest(path.build.css)) // выгружаем в build
         .pipe(webserver.reload({stream: true})); // перезагрузим сервер
@@ -97,7 +97,7 @@ gulp.task('js:build', function () {
         .pipe(plumber()) // для отслеживания ошибок
         .pipe(rigger()) // импортируем все указанные файлы в main.js
         .pipe(sourcemaps.init()) //инициализируем sourcemap
-        .pipe(uglify()) // минимизируем js
+        //.pipe(uglify())  минимизируем js
         .pipe(sourcemaps.write('./')) //  записываем sourcemap
         .pipe(gulp.dest(path.build.js)) // положим готовый файл
         .pipe(webserver.reload({stream: true})); // перезагрузим сервер
