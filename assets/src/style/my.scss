@@ -2,12 +2,13 @@
   box-sizing: border-box;
 }
 body{
-  max-width: 1600px;
   font-family: AvenirNextCyr-Regular, sans-serif;
   padding: 0;
-  margin: 0 auto;
-  //border: 1px solid;
-  //height: 100vh;
+  margin: 0;
+
+}
+img {
+  max-width: 100%;
 }
 .dark-blue_text {
   color: #005f75;
@@ -15,37 +16,74 @@ body{
 .blue_text {
   color: #458a9a;
 }
+.container {
+  display: flex;
+  width: 1600px;
+  margin: 0 auto;
+}
 .header {
   position: relative;
   display: flex;
+  padding-top: 5rem;
+
+  .container {
+    height: 100px;
+  }
 }
 
 .content {
   position: relative;
-  max-width: 1000px;
-  width: 1000px;
   display: flex;
+  width: 1200px;
 
   .logo img {
-    max-width: 200px;
     width: 200px;
   }
   .info {
-    width: 800px;
+    width: 1000px;
     display: flex;
     flex-flow: column;
+    padding: 0 40px 0 40px;
 
     .top-info {
       display: flex;
       justify-content: space-between;
+      border-bottom: 2px solid #b8d2d8;
+      padding-bottom: 20px;
+
       .type {
         font-family: AvenirNextCyr-Demi, sans-serif;
+        font-size: 20px;
+
+        span {
+          font-family: AvenirNextCyr-Bold, sans-serif;
+        }
+      }
+
+      .phone {
+        padding-right: 30px;
+      }
+    }
+
+    .bottom-info {
+      display: flex;
+      height: 100%;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      .id {
+        font-size: 40px;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
       }
     }
   }
 }
 .sidebar {
+  width: 400px;
   position: relative;
-  max-width: 600px;
-  width: 600px;
+
+  .code img {
+    height: 100px;
+  }
 }
