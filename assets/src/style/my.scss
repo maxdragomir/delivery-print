@@ -21,21 +21,51 @@ img {
   width: 1600px;
   margin: 0 auto;
 }
+
 .header {
   position: relative;
   display: flex;
-  padding-top: 5rem;
+  padding-top: 80px;
+  padding-bottom: 20px;
 
   .container {
     height: 100px;
   }
 }
+.section {
+  position: relative;
+  display: flex;
+
+  .checkbox {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    margin-left: 20px;
+
+    &.checked:after {
+      position: absolute;
+      top: -4px;
+      left: 2px;
+      content: '\2714';
+      display: block;
+      color: #458a9a;
+      font-size: 20px;
+    }
+  }
+}
+
+
 
 .content {
   position: relative;
   display: flex;
   width: 1200px;
+  padding: 0 20px 0 0;
 
+
+  //header
   .logo img {
     width: 200px;
   }
@@ -43,13 +73,14 @@ img {
     width: 1000px;
     display: flex;
     flex-flow: column;
-    padding: 0 40px 0 40px;
+    padding: 0 20px 0 20px;
 
     .top-info {
       display: flex;
       justify-content: space-between;
+      align-items: baseline;
       border-bottom: 2px solid #b8d2d8;
-      padding-bottom: 20px;
+      padding-bottom: 25px;
 
       .type {
         font-family: AvenirNextCyr-Demi, sans-serif;
@@ -78,7 +109,55 @@ img {
       }
     }
   }
+
+  //section
+  .blank-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+
+    .type-name {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background: #458a9a;
+      width: 200px;
+      height: 100%;
+      color: #fff;
+      font-size: 18px;
+      padding-left: 10px;
+      text-transform: uppercase;
+      font-family: AvenirNextCyr-Demi, sans-serif;
+    }
+    .types {
+      width: calc(100% - 200px);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 100%;
+      background: #ebf2f4;
+
+      .type {
+        display: flex;
+        font-family: AvenirNextCyr-Demi, sans-serif;
+        color: #005f75;
+        text-transform: uppercase;
+
+        & > span {
+          font-family: AvenirNextCyr-Italic, sans-serif;
+          text-transform: lowercase;
+        }
+      }
+    }
+  }
+  .blank-body {
+  }
 }
+
 .sidebar {
   width: 400px;
   position: relative;
