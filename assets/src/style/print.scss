@@ -1,0 +1,22 @@
+@media print {
+  body {
+    transform: scale(.63);
+    transform-origin: left top;
+  }
+  .button {
+    display: none;
+  }
+
+  .header {
+    padding-top: 0;
+  }
+  .section {
+
+  }
+  .footer {
+    padding-bottom: 0;
+  }
+
+}
+
+@page { size: A4 }
